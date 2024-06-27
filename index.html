@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Survey</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1 id="title">Product Feedback Survey Form</h1>
+    <p id="description">Thank you for taking the time to provide feedback for the product</p>
+    <form id="survey-form">
+        <fieldset>
+            <label id="name-label">Name: <input type="text" id="name" name="name" required
+                    placeholder="Enter your name" /></label>
+            <label id="email-label">E-mail: <input type="email" id="email" name="email" required
+                    placeholder="Enter your E-mail" /></label>
+            <label id="number-label">Mobile Number: <input type="number" id="number" name="number" min="1000000000"
+                    max="9999999999" placeholder="Enter your mobile number" required /></label>
+            <label id="number-label">D.O.B.<span class="sr-only">(Date of Birth)</span><input type="date"
+                    id="birth-date" name="birth-date" required /></label>
+        </fieldset>
+        <fieldset>
+            <label>Select the product for which you want to give feedback: 
+                <select name="product" id="dropdown">
+                    <option>(Select one)</option>
+                    <option value="1">BrewMatic Coffee Maker</option>
+                    <option value="2">IronPro Steam Iron</option>
+                    <option value="3">ToastTech Toaster</option>
+                    <option value="4">EnerGlow LED Bulbs</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            Please select the rating (from 1 to 5):
+            <label class="rating" for="one">
+                <input type="radio" id="one" name="rates" value="one" /> 1
+            </label>
+            <label class="rating" for="two">
+                <input type="radio" id="two" name="rates" value="two" /> 2
+            </label>
+            <label class="rating" foe="three">
+                <input type="radio" id="three" name="rates" value="three" /> 3
+            </label>
+            <label class="rating" for="four">
+                <input type="radio" id="four" name="rates" value="four" /> 4
+            </label>
+            <label class="rating" for="five">
+                <input type="radio" id="five" name="rates" value="five" /> 5
+            </label>
+        </fieldset>
+        <fieldset>
+            Which company or companies prduct do you like:
+            <label class="select2" for="bean_brew">
+                <input type="checkbox" id="bean_brew" value="1" /> BeanBrew Co.
+            </label>
+            <label class="select2" for="coffee_master">
+                <input type="checkbox" id="coffee_master" value="2" /> Coffee Master Appliances
+            </label>
+            <label class="select2" for="iron_tech">
+                <input type="checkbox" id="iron_tech" value="3" /> IronTech Solutions
+            </label>
+            <label class="select2" for="steam_pro">
+                <input type="checkbox" id="steam_pro" value="4" /> SteamPro Appliances
+            </label>
+            <label class="select2" for="toast_master">
+                <input type="checkbox" id="toast_master" value="5" /> ToastMaster Appliances
+            </label>
+            <label class="select2" for="crisp_tech">
+                <input type="checkbox" id="crisp_tech" value="6" /> CrispTech Toasters
+            </label>
+            <label class="select2" for="glow_tech">
+                <input type="checkbox" id="glow_tech" value="7" /> GlowTech Lighting
+            </label>
+            <label class="select2" for="luminex_LED">
+                <input type="checkbox" id="luminex_LED" value="8" /> Luminex LED
+            </label>
+        </fieldset>
+        <p class="text-area">Any suggestions or comments?</p>
+        <textarea id="suggestion" name="suggestion" row="10" cols="75"
+            placeholder="Enter your comment here..."></textarea>
+        <input type="submit" id="submit">
+    </form>
+</body>
+
+</html>
